@@ -57,8 +57,8 @@
 
     <script>
       function removeTransition(e) {
-        if (e.propertyName !== "transform") return;
-        this.classList.remove("playing");
+        if (e.propertyName !== 'transform') return;
+        this.classList.remove('playing');
       }
 
       function playSound(e) {
@@ -68,14 +68,14 @@
 
         audio.currentTime = 0; // rewind to the start
         audio.play();
-        key.classList.add("playing");
+        key.classList.add('playing');
       }
 
-      const keys = document.querySelectorAll(".key");
+      const keys = document.querySelectorAll('.key');
       keys.forEach(key =>
-        key.addEventListener("transitionend", removeTransition)
+        key.addEventListener('transitionend', removeTransition)
       );
-      window.addEventListener("keydown", playSound);
+      window.addEventListener('keydown', playSound);
     </script>
   </body>
 </html>
